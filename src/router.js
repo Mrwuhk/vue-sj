@@ -1,13 +1,13 @@
-import VueRouter from  'vue-router';
-import App from './App.vue';
+import VueRouter from 'vue-router';
+import Home from './views/Home.vue';
 
 
-const routers= [{
-	path:'/home',
-	component:App,
+const routes= [{
+	path: '/home',
+	component: Home,
 }];
 
 export default new VueRouter({
-	routers
+	routes,
 });
 
