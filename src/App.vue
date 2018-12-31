@@ -1,7 +1,28 @@
 <template>
   <div id="app">
-  
-    <router-view></router-view>
+
+    我的第一个vue程序<br/>
+    {{text}}<br/>
+    <input type="text" v-model="text">
+    <ul>
+      <li v-for="person in list">
+        {{person.name}}
+      </li>
+    </ul>
+  <hr/>
+  <span v-html="html"></span>
+  <hr/>
+  v-if:
+  <div v-if="isShow" style="height: 100px;background-color: red;"></div>
+  <hr/>
+  v-show:
+  <div v-show="isShow" style="height: 100px;background-color: red;"></div>
+  <hr/>
+  v-model:
+  <input type="text" v-model="mText">
+  {{mText}}
+  <hr/>
+  <input type="text" v-bind:value="mText">
   </div>
 </template>
 
@@ -11,6 +32,21 @@ export default {
   name: 'app',
   components: {
 
+  },
+  data(){
+    return{
+      text:'大家好',
+      list:[{name:"jack"},{name:"yuheng"}],
+      html:`<ul>
+        <li>我是猪头三</li>
+        <li>我是猪头四</li>
+        <li>我是猪头五</li>
+      </ul>
+      `,
+      isShow:true,
+      mText:"haha",
+
+    }
   }
 }
 </script>
