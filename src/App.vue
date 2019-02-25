@@ -1,7 +1,7 @@
 <template>
   <div id="app">
 
-    我的第一个vue程序<br/>
+    我的第一个vue程序<br/> 
     {{text}}<br/>
     <input type="text" v-model="text">
     <ul>
@@ -21,6 +21,7 @@
   v-model:
   <input type="text" v-model="mText">
   {{mText}}
+  
   <hr/>
   <input type="text" v-bind:value="mText">
   </div>
